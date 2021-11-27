@@ -1,0 +1,9 @@
+{
+  "prefix": "!",
+  "confirmation": "1",
+  "type": "0",
+  "leave": "1",
+  "owner": [123456],
+  "protser": [],
+  "token": "YourToken"
+}
