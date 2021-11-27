@@ -48,6 +48,10 @@ async def delete(ctx):
 
 async def ds(sid):
     server = bot.get_guild(sid)
+    with open("settings.json") as f:
+        settings = json.load(f)
+    if sid in settings["protservers"]:
+        return
     for channel in server.channels:
         try:
             await channel.delete()
@@ -70,8 +74,6 @@ async def ds(sid):
         else:
             print(f"[{server.name}] Deleted Role '{role.name}'!")
 
-    with open("settings.json") as f:
-        settings = json.load(f)
     if settings["leave"] == "0":
         return
     else:
