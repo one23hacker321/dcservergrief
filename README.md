@@ -6,7 +6,7 @@
 ##Setup:
 - Paste the Bot Token in the File `settings.json` at `token`
 - Paste your User ID at in the File `settings.json` at `owner`
-- Paste IDs of the Servers you dont want to be deleted at the Bot Start (only when Type is 1)
+- Paste IDs of the Servers you dont want to be deleted in the File `settings.json` at `protser`
 
 ##Settings:
 All the Settings you can set in the File `settings.json`
